@@ -1120,7 +1120,27 @@ html[data-scroll-container] {
     letter-spacing: .22em;
     text-transform: uppercase;
     color: rgba(25, 27, 29, .85);
+}
+
+/* Glass backdrop behind the hero tagline so text reads against images */
+.landing-main .ls-glass {
+    display: inline-block;
+    padding: 22px 44px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.55);
+    -webkit-backdrop-filter: blur(14px) saturate(1.5);
+    backdrop-filter: blur(14px) saturate(1.5);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(25, 27, 29, 0.18);
     margin-bottom: 10px;
+}
+
+.landing-main .ls-glass .ls-text {
+    margin-bottom: 10px;
+}
+
+.landing-main .ls-glass .ls-text:last-child {
+    margin-bottom: 0;
 }
 
 .landing-main .ls-switcher a {
@@ -1625,6 +1645,16 @@ html[data-scroll-container] {
         font-size: 14px;
         line-height: 22px;
         letter-spacing: .14em;
+    }
+
+    .landing-main .ls-glass {
+        padding: 14px 22px;
+        border-radius: 18px;
+        max-width: 92vw;
+    }
+
+    .landing-main .ls-glass .ls-text {
+        white-space: normal;
     }
 
     .landing-main .ls-switcher a {
