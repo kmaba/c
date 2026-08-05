@@ -197,6 +197,7 @@ function landingPageOpen(){
   lpOpen.fromTo('.logo-text',1,{y:'100%'},{y:'0%',ease:'power2.out'},0);
   lpOpen.fromTo('.header-cta-but',1,{x:-30,opacity:0},{x:0,opacity:1,ease:'power2.out'},.3);
   lpOpen.fromTo('.lst_line',1.5,{y:'100%'},{y:'0%',stagger:.06,ease:'power2.out',onStart:function(){gsap.set('.layout-switch',{visibility:'visible'})}},.4);
+  lpOpen.fromTo('.ls-glass',.9,{y:60,opacity:0},{y:0,opacity:1,ease:'power2.out'},.55);
   lpOpen.fromTo('.lph-headline .lsa_char',1.5,{y:'100%'},{y:'0%',stagger:.04,ease:'power2.out'},.5);
   lpOpen.fromTo('.lph-image-3',1.5,{y:'100%'},{y:'0%',ease:'power3.out'},.5);
   lpOpen.fromTo('.lph-image-2, .lph-image-4',1.5,{y:'100%'},{y:'0%',ease:'power3.out'},.8);
