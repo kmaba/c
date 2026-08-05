@@ -1143,6 +1143,18 @@ html[data-scroll-container] {
     margin-bottom: 0;
 }
 
+.landing-main .ls-glass .ls-text.testimonial {
+    color: rgba(25, 27, 29, .6);
+}
+
+.landing-main .ls-glass .ls-stars {
+    color: #9aa0a6;
+    font-size: 16px;
+    letter-spacing: .18em;
+    margin-right: 4px;
+    vertical-align: 1px;
+}
+
 .landing-main .ls-switcher a {
     font-size: 38px;
     line-height: 46px;

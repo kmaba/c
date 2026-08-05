@@ -182,8 +182,8 @@ function initSplash(loader){
   loadAn.to(num3wrap,1.5,{y:'0%',ease:'power2.out'},.5);
   loadAn.set(textEl,{visibility:'visible'},.5);
   loadAn.to(textEl,1.2,{x:0,ease:'power3.out'},.5);
-  loadAn.to('.apl-loading:not(.apl-sub) .apl-load-word',.7,{y:'0%',stagger:0.04,ease:'power3.out'},.95);
-  loadAn.to('.apl-loading.apl-sub .apl-load-word',.55,{y:'0%',stagger:0.05,ease:'power3.out'},2.1);
+  loadAn.to('.apl-loading:not(.apl-sub) .apl-load-word',1.1,{y:'0%',stagger:0.06,ease:'power3.out'},.95);
+  loadAn.to('.apl-loading.apl-sub .apl-load-word',.9,{y:'0%',stagger:0.07,ease:'power3.out'},2.4);
   loadAn.to('.logo-text',.8,{y:'0%',ease:'power2.out'},2);
   loadAn.to('.header-cta-but',.9,{x:0,opacity:1,ease:'power2.out'},2.8);
   loadAn.to(num3wrap,1,{y:'-50%',ease:'power2.out'},duration-.6);
