@@ -133,7 +133,7 @@ function initSplash(loader){
   var wrapper = loader.find('.apl-wrapper');
   var textEl = loader.find('.apl-text');
   var bg = loader.find('.apl-background');
-  var duration = +loader.data('duration') || 4;
+  var duration = +loader.data('duration') || 5;
 
   $('body').addClass('loading');
   gsap.set('#page',{visibility:'hidden'});
@@ -141,7 +141,7 @@ function initSplash(loader){
   var tl = gsap.timeline({onComplete:function(){
     $('body').removeClass('loading');
     gsap.set('#page',{visibility:'visible'});
-    gsap.to(bg,.9,{height:'0%',ease:'power2.inOut',onComplete:function(){loader.hide();}});
+    gsap.to(bg,.7,{height:'0%',ease:'power2.inOut',onComplete:function(){loader.hide();}});
     if($('#page').hasClass('landing-main')){ landingPageOpen(); }
     else { demoPageOpen(); }
     initLocomotiveScroll();
@@ -150,10 +150,11 @@ function initSplash(loader){
   }});
 
   tl.set(textEl,{visibility:'visible'},.1);
-  tl.to('.apl-load-word',1,{y:'0%',stagger:0.05,ease:'power2.out'},.25);
+  // Main title first
+  tl.to('.apl-loading:not(.apl-sub) .apl-load-word',.8,{y:'0%',stagger:0.03,ease:'power3.out'},.25);
+  // Subtitle pops only after the title has finished
+  tl.to('.apl-loading.apl-sub .apl-load-word',.6,{y:'0%',stagger:0.04,ease:'power3.out'},1.3);
   tl.fromTo('.apl-num-wrapper',duration,{y:0},{y:'-91%',ease:'power2.inOut'},.35);
-  tl.to(wrapper,.5,{opacity:0,ease:'power2.inOut'},duration-.9);
-  tl.to(textEl,.45,{opacity:0,ease:'power2.inOut'},duration-.65);
 }
 
 /* ===== Landing Page Functions ===== */
