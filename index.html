@@ -3,102 +3,502 @@
 
 <head>
   <meta charset="utf-8">
-
-  <title>.link/c</title>
-
+  <title>Grand Ballroom Events | Premium Event Venue in Perth, WA</title>
   <meta name="author" content="kmaba">
-  <meta name="description" content="Cybersecurity, on .link">
-  <meta name="keywords" content="portfolio, agency, personal, creative">
+  <meta name="description" content="Grand Ballroom Events is a premium event venue in Perth, Western Australia offering elegant spaces for weddings, corporate functions, birthday celebrations, school events, cultural celebrations and private parties. Explore packages, view the ballroom, check availability and book your event.">
+  <meta name="keywords" content="ballroom, event venue, Perth, weddings, corporate events, birthday parties, event packages, book your event">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="../fonts.googleapis.com/css2fb67.css?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="css/plugins.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <link href="css/landing.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.css">
 
-  <link
-  rel="icon"
-  type="image/svg"
-  href="./img/favicon-to-keep-eyeballs.svg"
-  media="(prefers-color-scheme: dark)"
-/>
-<link
-  rel="icon"
-  type="image/svg"
-  href="./img/favicon-to-burn-eyeballs.svg"
-  media="(prefers-color-scheme: light)"
-/>
-
+  <link rel="icon" type="image/svg" href="./img/favicon.svg"/>
 </head>
 <body data-barba="wrapper">
 
-<div style="display: none" data-duration="5" class="alioth-page-loader" data-layout="light">
+<div class="alioth-page-loader" data-duration="4" data-layout="dark">
   <span class="apl-background"></span>
-
   <div class="apl-count"></div>
-
+  <div class="apl-text" data-line-1="Wanna book a ballroom?" data-line-2="You are at the right place."></div>
 </div>
-
 
 <div data-dark-circle="rgba(25,27,29,.6)" data-dark-dot="#191b1d" data-light-circle="hsla(0,0%,100%,.2)" data-light-dot="#fff" id="mouseCursor">
   <div id="cursor"></div>
   <div id="dot"></div>
 </div>
 
-
 <div class="landing-header">
-
   <div class="landing-logo">
     <a href="index.html">
-      <img alt="Site Logo" class="dark-logo" src="img/site-logo.png">
-      <img alt="Site Logo" class="light-logo" src="img/site-logo-light.png">
+      <img alt="Grand Ballroom Events" class="dark-logo" src="img/site-logo.png">
+      <img alt="Grand Ballroom Events" class="light-logo" src="img/site-logo-light.png">
     </a>
+  </div>
+  <div class="landing-nav">
+    <div class="landing-nav-wrap">
+      <ul class="landing-menu">
+        <li><a href="#about" data-scroll>About Us</a></li>
+        <li><a href="#facilities" data-scroll>Facilities</a></li>
+        <li><a href="#packages" data-scroll>Packages</a></li>
+        <li><a href="#gallery" data-scroll>Gallery</a></li>
+        <li><a href="#book" data-scroll>Book Your Event</a></li>
+        <li><a href="#contact" data-scroll>Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="landing-header-right">
+    <div class="header-cta-but">
+      <a data-hover="" href="dark.html">Book Your Event</a>
+    </div>
+  </div>
+</div>
+
+<div id="page" data-barba="container" data-barba-namespace="demo-main" class="landing-main" data-scroll-container>
+
+  <!-- Hero Section -->
+  <section id="hero" class="landing-page-head">
+    <span class="lph-overlay"></span>
+    <div class="lph-headline">
+      <div class="lph-headline-wrap">
+        <h1 class="big-title">Wanna book<br>a ballroom?</h1>
+      </div>
+    </div>
+    <div class="layout-switch">
+      <div class="ls-text">You are at the right place.</div>
+      <div class="ls-switcher">
+        <a class="light-switch" href="dark.html">Check Availability</a>
+        <span>-</span>
+        <a class="dark2-switch" href="dark2.html">Request a Booking</a>
+      </div>
+      <div class="ls-text" style="color: rgba(25,27,29,.6)">Grand Ballroom Events &mdash; Perth, Western Australia</div>
+    </div>
+
+    <!-- Hero Images -->
+    <div class="lph-images">
+      <div class="lph-images-wrap">
+        <div class="lph-image lph-image-1"><div class="lph-img"><img src="img/hero1.jpg" alt="Ballroom interior with golden chandeliers"></div></div>
+        <div class="lph-image lph-image-2"><div class="lph-img"><img src="img/hero2.jpg" alt="Elegant wedding reception table settings"></div></div>
+        <div class="lph-image lph-image-3"><div class="lph-img"><img src="img/hero3.jpg" alt="Grand ballroom stage with warm lighting"></div></div>
+        <div class="lph-image lph-image-4"><div class="lph-img"><img src="img/hero4.jpg" alt="Round tables dressed for a gala dinner"></div></div>
+        <div class="lph-image lph-image-5"><div class="lph-img"><img src="img/hero5.jpg" alt="Luxury event venue lounge area"></div></div>
+      </div>
+    </div>
+
+    <!-- Hero CTA Buttons -->
+    <div class="hero-cta">
+      <a href="dark.html" class="hero-cta-btn primary">Book Your Event</a>
+      <a href="dark2.html" class="hero-cta-btn secondary">Request a Booking</a>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="landing-page-content">
+    <div class="section no-margin" style="background: #ebebeb">
+      <span class="a-empty-space" style="height: 100px"></span>
+      <div class="wrapper-small">
+        <div class="c-col-12">
+          <div data-parallax="true" data-image="false" data-background-text="About" class="alioth-heading"></div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="c-col-12">
+          <div class="text-wrapper">
+            <h2>About Grand Ballroom Events</h2>
+            <p>Grand Ballroom Events is a premium event venue located in Perth, Western Australia. We offer elegant spaces for weddings, birthday celebrations, corporate functions, school events, cultural celebrations and private parties &mdash; all supported by a full range of services including event space hire, catering packages, decoration options, entertainment arrangements and event planning support.</p>
+            <p>Whether you are planning an intimate dinner or a grand gala, our dedicated events team works with you from the first enquiry to the final dance, so you can focus on celebrating while we handle every detail.</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="c-col-12">
+          <div class="about-features">
+            <div class="about-feature">
+              <i class="fas fa-utensils"></i>
+              <h4>Catering Packages</h4>
+              <p>Flexible menus crafted by our in-house chefs to suit every occasion and dietary requirement.</p>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-chair"></i>
+              <h4>Decoration Options</h4>
+              <p>Custom themes, floral arrangements and table styling tailored to your vision.</p>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-music"></i>
+              <h4>Entertainment</h4>
+              <p>Stage, sound and lighting hire with recommendations for DJs, bands and MCs.</p>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-clipboard-check"></i>
+              <h4>Event Planning</h4>
+              <p>End-to-end coordination, from vendor management to a flawless run sheet on the day.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ballroom Facilities Section -->
+  <section id="facilities" class="landing-page-content">
+    <div class="section no-margin" style="background: #f1f1f1">
+      <span class="a-empty-space" style="height: 100px"></span>
+      <div class="wrapper-small">
+        <div class="c-col-12">
+          <div data-parallax="true" data-image="false" data-background-text="Facilities" class="alioth-heading"></div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="c-col-12">
+          <div class="text-wrapper">
+            <h2>Ballroom Facilities</h2>
+            <p>Our venue is designed to impress at every scale, from an intimate celebration to a full-capacity gala of 500 guests.</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="facilities-grid">
+          <div class="facility-card">
+            <div class="facility-img"><img src="img/gallery1.jpg" alt="The main ballroom"></div>
+            <h4>The Main Ballroom</h4>
+            <p>Spacious, pillar-free floor with dazzling chandeliers and a capacity of up to 500 guests.</p>
+          </div>
+          <div class="facility-card">
+            <div class="facility-img"><img src="img/gallery2.jpg" alt="Stage with professional lighting"></div>
+            <h4>Stage &amp; Lighting</h4>
+            <p>Professional stage, ambient lighting rigs and a high-quality sound system for every performance.</p>
+          </div>
+          <div class="facility-card">
+            <div class="facility-img"><img src="img/gallery3.jpg" alt="VIP lounge area"></div>
+            <h4>VIP Lounge</h4>
+            <p>A private lounge for bridal parties, VIP guests and pre-event receptions.</p>
+          </div>
+          <div class="facility-card">
+            <div class="facility-img"><img src="img/gallery4.jpg" alt="Catering kitchen"></div>
+            <h4>Catering Kitchen</h4>
+            <p>Fully equipped commercial kitchen so our chefs can serve fresh food made to order.</p>
+          </div>
+          <div class="facility-card">
+            <div class="facility-img"><img src="img/gallery5.jpg" alt="Bridal suite and dressing rooms"></div>
+            <h4>Bridal Suite</h4>
+            <p>A stylish private suite with dressing tables and mirror lighting for getting ready in comfort.</p>
+          </div>
+          <div class="facility-card">
+            <div class="facility-img"><img src="img/gallery6.jpg" alt="Ample parking and accessible entry"></div>
+            <h4>Parking &amp; Access</h4>
+            <p>Ample on-site parking, wheelchair-accessible entry and convenient access for guests of all ages.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Packages Section -->
+  <section id="packages" class="landing-page-content">
+    <div class="section no-margin" style="background: #ebebeb">
+      <span class="a-empty-space" style="height: 100px"></span>
+      <div class="wrapper-small">
+        <div class="c-col-12">
+          <div data-parallax="true" data-image="false" data-background-text="Packages" class="alioth-heading"></div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="c-col-12">
+          <div class="text-wrapper">
+            <h2>Event Packages</h2>
+            <p>Choose the package that fits your celebration &mdash; every package can be customised by our events team.</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="packages-grid">
+          <div class="package-card">
+            <h4>Essential</h4>
+            <div class="package-price">from $2,500</div>
+            <ul>
+              <li>Venue hire for up to 80 guests</li>
+              <li>Tables, chairs &amp; white linen</li>
+              <li>Basic sound system</li>
+              <li>Event coordinator on the day</li>
+            </ul>
+            <a href="dark.html" class="hero-cta-btn primary">Check Availability</a>
+          </div>
+          <div class="package-card featured">
+            <h4>Premium</h4>
+            <div class="package-price">from $5,000</div>
+            <ul>
+              <li>Venue hire for up to 250 guests</li>
+              <li>Premium catering package</li>
+              <li>Stage, lighting &amp; sound</li>
+              <li>Decoration &amp; styling included</li>
+              <li>Dedicated events manager</li>
+            </ul>
+            <a href="dark.html" class="hero-cta-btn primary">Check Availability</a>
+          </div>
+          <div class="package-card">
+            <h4>Platinum</h4>
+            <div class="package-price">from $8,500</div>
+            <ul>
+              <li>Full venue hire for up to 500 guests</li>
+              <li>Gourmet catering &amp; bar package</li>
+              <li>Complete production &amp; entertainment</li>
+              <li>Full custom theming &amp; florals</li>
+              <li>Priority planning &amp; concierge</li>
+            </ul>
+            <a href="dark.html" class="hero-cta-btn primary">Check Availability</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="landing-page-content">
+    <div class="section no-margin" style="background: #f1f1f1">
+      <span class="a-empty-space" style="height: 100px"></span>
+      <div class="wrapper-small">
+        <div class="c-col-12">
+          <div data-parallax="true" data-image="false" data-background-text="Gallery" class="alioth-heading"></div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="c-col-12">
+          <div class="text-wrapper">
+            <h2>Our Gallery</h2>
+            <p>Browse ballroom decorations, previous events, wedding receptions, corporate functions and our venue facilities.</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="img/gallery1.jpg" alt="Ballroom interior with golden chandeliers"></div>
+          <div class="gallery-item"><img src="img/gallery2.jpg" alt="Stage with professional event lighting"></div>
+          <div class="gallery-item"><img src="img/gallery3.jpg" alt="VIP lounge with plush seating"></div>
+          <div class="gallery-item"><img src="img/gallery4.jpg" alt="Elegant catering and buffet setup"></div>
+          <div class="gallery-item"><img src="img/gallery5.jpg" alt="Wedding reception table settings"></div>
+          <div class="gallery-item"><img src="img/gallery6.jpg" alt="Corporate gala dinner round tables"></div>
+          <div class="gallery-item"><img src="img/gallery7.jpg" alt="Birthday party balloon and floral decor"></div>
+          <div class="gallery-item"><img src="img/gallery8.jpg" alt="Cultural celebration event styling"></div>
+          <div class="gallery-item"><img src="img/gallery9.jpg" alt="Live band performing at a function"></div>
+          <div class="gallery-item"><img src="img/gallery10.jpg" alt="Champagne tower at a reception"></div>
+          <div class="gallery-item"><img src="img/gallery11.jpg" alt="Dessert and cake table display"></div>
+          <div class="gallery-item"><img src="img/gallery12.jpg" alt="Dance floor with disco lighting"></div>
+          <div class="gallery-item"><img src="img/gallery13.jpg" alt="Outdoor function terrace at dusk"></div>
+          <div class="gallery-item"><img src="img/gallery14.jpg" alt="Formal table setting with gold accents"></div>
+          <div class="gallery-item"><img src="img/gallery15.jpg" alt="Grand entrance hall with crystal decor"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="landing-page-content">
+    <div class="section no-margin" style="background: #ffffff">
+      <span class="a-empty-space" style="height: 100px"></span>
+      <div class="wrapper-small">
+        <div class="c-col-12">
+          <div data-parallax="true" data-image="false" data-background-text="Testimonials" class="alioth-heading"></div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="c-col-12">
+          <div class="text-wrapper">
+            <h2>What Our Clients Say</h2>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Our wedding reception at the Grand Ballroom was absolutely magical. The team turned our vision into reality and every guest was blown away by the venue."</p>
+            <h4>Sarah &amp; James Thompson</h4>
+            <span>Wedding Reception, March 2026</span>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"We hosted our annual corporate gala here and it ran flawlessly. Professional staff, stunning lighting and the catering was exceptional."</p>
+            <h4>Mark Chen</h4>
+            <span>Corporate Events Manager</span>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"My daughter's 21st birthday was a dream come true. The decoration options and attention to detail exceeded every expectation."</p>
+            <h4>Priya Sharma</h4>
+            <span>Birthday Celebration, January 2026</span>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Beautiful venue, incredible service. Our school formal was unforgettable and the students are still talking about it weeks later."</p>
+            <h4>Rebecca Nguyen</h4>
+            <span>School Event Coordinator</span>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"The Grand Ballroom made our cultural celebration feel truly special. Every guest felt welcome, and the space looked phenomenal."</p>
+            <h4>Hussein Ali</h4>
+            <span>Cultural Celebration Host</span>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"From the lighting to the catering, everything was perfect. The planning support took all the stress out of organising our event."</p>
+            <h4>Emma Wilson</h4>
+            <span>Private Party, April 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Your Event Section -->
+  <section id="book" class="landing-page-content">
+    <div class="section no-margin" style="background: #121212">
+      <span class="a-empty-space" style="height: 100px"></span>
+      <div class="wrapper-small">
+        <div class="c-col-12">
+          <div data-parallax="true" data-image="false" data-background-text="Book" class="alioth-heading"></div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="c-col-12">
+          <div class="text-wrapper">
+            <h2 style="color: #fff">Book Your Event</h2>
+            <p style="color: hsla(0,0%,100%,.7)">Check availability for your preferred date or request a booking &mdash; our events team responds within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="c-col-12">
+          <div class="book-cta">
+            <a href="dark.html" class="hero-cta-btn on-dark">Check Availability</a>
+            <a href="dark2.html" class="hero-cta-btn on-dark-outline">Request a Booking</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="landing-page-content">
+    <div class="section no-margin" style="background: #191b1d">
+      <span class="a-empty-space" style="height: 100px"></span>
+      <div class="wrapper-small">
+        <div class="c-col-12">
+          <div data-parallax="true" data-image="false" data-background-text="Contact" class="alioth-heading"></div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="c-col-12">
+          <div class="text-wrapper">
+            <h2 style="color: #fff">Contact Us</h2>
+            <p style="color: hsla(0,0%,100%,.7)">We would love to hear from you. Reach out for enquiries, quotes or to tour the venue.</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper no-margin">
+        <div class="c-col-7">
+          <form class="contact-form" style="color: hsla(0,0%,100%,.7)">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Your Phone">
+            </div>
+            <div class="form-group">
+              <textarea rows="5" placeholder="Tell us about your event" required></textarea>
+            </div>
+            <button type="submit" class="hero-cta-btn on-dark">Send Message</button>
+          </form>
+        </div>
+        <div class="c-col-5">
+          <div class="contact-info">
+            <h4 style="color: #fff">Grand Ballroom Events</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 88 Ballroom Avenue, Perth WA 6000</p>
+            <p><i class="fas fa-phone-alt"></i> (08) 9000 1234</p>
+            <p><i class="fas fa-envelope"></i> bookings@grandballroomevents.com.au</p>
+            <p><i class="fas fa-clock"></i> Mon&ndash;Sun, 9:00am&ndash;8:00pm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="landing-footer">
+    <div class="footer-marquee">
+      <div class="marquee-track">
+        <span>Grand Ballroom Events &mdash; Book Your Event &mdash; Weddings &bull; Corporate Functions &bull; Birthday Parties &bull; School Events &bull; Cultural Celebrations &mdash; Grand Ballroom Events &mdash; Book Your Event &mdash; Weddings &bull; Corporate Functions &bull; Birthday Parties &bull; School Events &bull; Cultural Celebrations &mdash;</span>
+        <span>Grand Ballroom Events &mdash; Book Your Event &mdash; Weddings &bull; Corporate Functions &bull; Birthday Parties &bull; School Events &bull; Cultural Celebrations &mdash; Grand Ballroom Events &mdash; Book Your Event &mdash; Weddings &bull; Corporate Functions &bull; Birthday Parties &bull; School Events &bull; Cultural Celebrations &mdash;</span>
+      </div>
+    </div>
+    <div class="footer-main">
+      <div class="wrapper no-margin">
+        <div class="c-col-4">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img src="img/site-logo-light.png" alt="Grand Ballroom Events">
+            </a>
+          </div>
+          <p>Grand Ballroom Events is a premium event venue in Perth, Western Australia &mdash; making every celebration unforgettable.</p>
+        </div>
+        <div class="c-col-4">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#facilities">Ballroom Facilities</a></li>
+            <li><a href="index.html#packages">Event Packages</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="dark.html">Book Your Event</a></li>
+            <li><a href="dark2.html">Contact Us</a></li>
+            <li><a href="references.html">View References (APA 7)</a></li>
+          </ul>
+        </div>
+        <div class="c-col-4">
+          <h4>Connect With Us</h4>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p style="margin-top: 20px"><a href="references.html" style="color: hsla(0,0%,100%,.7)">View References (APA 7) <i class="fas fa-external-link-alt"></i></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrapper no-margin">
+        <div class="c-col-12">
+          <p>&copy; 2026 Grand Ballroom Events. All rights reserved. &nbsp;&bull;&nbsp; <a href="references.html" style="color: hsla(0,0%,100%,.4)">References (APA 7)</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="section no-margin">
+    <div class="wrapper-full no-margin">
+      <div class="c-col-12 no-gap no-margin">
+        <div class="alioth-page-nav" style="background-color: #ffff">
+          <a href="index.html">
+            <div style="color: #191b1d" class="page-title">Grand Ballroom Events -</div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
 
-
-<div id="page" data-barba="container" data-barba-namespace="demo-main" class="landing-main">
-
-  <div class="landing-page-head">
-
-    <span class="lph-overlay"></span>
-
-
-    <div class="lph-headline">
-      <div class="lph-headline-wrap">
-        <h1 class="big-title">Wanna stay protected?<br>learn on .link/c</h1>
-      </div>
-    </div>
-
-
-    <div class="layout-switch">
-
-      <div class="ls-text">Learn Attack</div>
-
-
-      <div class="ls-switcher">
-
-        <a class="light-switch" href="light.html">MIM</a>
-
-
-        <span>-</span>
-
-
-        <a class="dark2-switch" href="dark.html">DDOS</a>
-
-        <span>-</span>
-
-        <a class="dark-switch" href="dark2.html">MALWARE</a>
-
-      </div>
-      <div class="ls-text" style="color: rgba(0, 0, 0, 0.863)">Click the above to learn an attack and how to defend against it.</div>
-      <div class="ls-text" style="color: rgba(25,27,29,.6)">The internet is a harsh place, it can be useful for many people and harmful to some, many people want to make some quick money by attacking you, stay alert.</div>
-      
-
-      <script src="js/jquery.min.js"></script>
-      <script src="js/plugins.js"></script>
-      <script src="js/barba.js"></script>
-      <script src="js/gsap.js"></script>
-      <script src="js/landing.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.js"></script>
+<script src="js/barba.js"></script>
+<script src="js/gsap.js"></script>
+<script src="js/landing.js"></script>
 </body>
 </html>
