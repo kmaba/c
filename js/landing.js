@@ -82,7 +82,6 @@ function setInitialStates(){
   gsap.set('.header-cta-but',{x:-30,opacity:0});
   gsap.set('.lst_line',{y:'100%'});
   gsap.set('.lsa_char',{y:'100%'});
-  gsap.set('.ls-switcher span',{y:'100%'});
   gsap.set('.lph-image-3',{y:'100%'});
   gsap.set('.lph-image-2, .lph-image-4',{y:'100%'});
   gsap.set('.lph-image-1, .lph-image-5',{y:'100%'});
@@ -99,9 +98,11 @@ function buildSplash(loader){
     $.each(lines,function(i,line){
       var lineEl = $('<div class="apl-loading"></div>');
       if(i === 1){ lineEl.addClass('apl-sub'); }
-      var chars = line.split('');
-      $.each(chars,function(){
-        lineEl.append('<span><span class="apl-load-word">'+$('<span>').text(this).html()+'</span></span>');
+      // Split by spaces to preserve word spacing
+      var words = line.split(' ');
+      $.each(words,function(wi,word){
+        lineEl.append('<span class="apl-load-word-wrapper"><span class="apl-load-word">'+word+'</span></span>');
+        if(wi < words.length - 1){ lineEl.append(' '); }
       });
       textEl.append(lineEl);
     });
@@ -162,8 +163,7 @@ function landingPageOpen(){
   lpOpen.fromTo('.landing-logo img',1,{y:'100%'},{y:'0%',ease:'power2.out'},0);
   lpOpen.fromTo('.header-cta-but',1,{x:-30,opacity:0},{x:0,opacity:1,ease:'power2.out'},.3);
   lpOpen.fromTo('.lst_line',1.5,{y:'100%'},{y:'0%',stagger:.06,ease:'power2.out',onStart:function(){gsap.set('.layout-switch',{visibility:'visible'})}},.4);
-  lpOpen.fromTo('.lsa_char',1.5,{y:'100%'},{y:'0%',stagger:.04,ease:'power2.out'},.5);
-  lpOpen.fromTo('.ls-switcher span',1.5,{y:'100%'},{y:'0%',stagger:.04,ease:'power2.out'},1.2);
+  lpOpen.fromTo('.lph-headline .lsa_char',1.5,{y:'100%'},{y:'0%',stagger:.04,ease:'power2.out'},.5);
   lpOpen.fromTo('.lph-image-3',1.5,{y:'100%'},{y:'0%',ease:'power3.out'},.5);
   lpOpen.fromTo('.lph-image-2, .lph-image-4',1.5,{y:'100%'},{y:'0%',ease:'power3.out'},.8);
   lpOpen.fromTo('.lph-image-1, .lph-image-5',1.5,{y:'100%'},{y:'25%',ease:'power3.out'},1.1);
@@ -197,15 +197,6 @@ function landingPageHead(){
     });
     if($h1.length){ $h1.html(out); }
     else{ $this.html(out); }
-  });
-  $('.layout-switch').each(function(){
-    var $this=$(this);
-    $this.find('.ls-switcher a, .ls-switcher span').each(function(){
-      var $el=$(this);
-      $el.html($el.text().replace(/\S+/g,function(word){
-        return '<span class="lsa_word">'+word.replace(/\S/g,'<span class="lsa_char">$&</span>')+'</span>';
-      }));
-    });
   });
 }
 

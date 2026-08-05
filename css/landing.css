@@ -898,10 +898,10 @@ span.lph-overlay {
 .marquee-track span {
     flex-shrink: 0;
     padding-right: 60px;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: hsla(0,0%,100%,0.4);
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.6);
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
@@ -910,7 +910,7 @@ span.lph-overlay {
 .marquee-track span::before {
     content: '◆';
     color: #B78D1E;
-    font-size: 16px;
+    font-size: 24px;
     letter-spacing: 0;
     margin-right: 34px;
 }
@@ -1077,11 +1077,11 @@ html[data-scroll-container] {
 
 /* ----- Hero layout (landing-main) ----- */
 .landing-main .lph-headline {
-    top: 38%;
+    top: 32%;
 }
 
 .landing-main .layout-switch {
-    top: 62%;
+    top: 60%;
     width: 100%;
 }
 
@@ -1091,17 +1091,17 @@ html[data-scroll-container] {
 }
 
 .landing-main .ls-text {
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 24px;
     letter-spacing: .22em;
     text-transform: uppercase;
     color: rgba(25, 27, 29, .85);
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 .landing-main .ls-switcher a {
-    font-size: 52px;
-    line-height: 62px;
+    font-size: 38px;
+    line-height: 46px;
     display: block;
     color: #191b1d;
 }
@@ -1157,7 +1157,7 @@ html[data-scroll-container] {
 
 .alioth-page-loader .apl-text .apl-loading span {
     display: inline-block;
-    overflow: hidden;
+    overflow: visible;
     vertical-align: top;
 }
 
@@ -1169,10 +1169,16 @@ html[data-scroll-container] {
     margin-top: 18px;
 }
 
+.alioth-page-loader .apl-text .apl-load-word-wrapper {
+    display: inline-block;
+    overflow: hidden;
+}
+
 .alioth-page-loader .apl-text .apl-load-word {
     display: inline-block;
     transform: translateY(110%);
     will-change: transform;
+    letter-spacing: 0.05em;
 }
 
 .alioth-page-loader .apl-count {
