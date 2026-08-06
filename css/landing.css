@@ -126,6 +126,7 @@
     letter-spacing: -0.02em;
     color: #191b1d;
     text-decoration: none;
+    padding-left: 8px;
     padding-bottom: 8px;
     will-change: transform;
 }
@@ -392,6 +393,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 
 }
 
@@ -1225,6 +1227,7 @@ html[data-scroll-container] {
 .landing-main .lph-headline h1.big-title {
     font-size: 120px;
     line-height: 135px;
+    letter-spacing: -0.02em;
 }
 
 .landing-main .ls-text {
