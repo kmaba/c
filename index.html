@@ -77,15 +77,250 @@
     </div>
 
     <!-- Hero CTA -->
-    <div class="hero-cta">
-      <div class="hero-cta-dropdown-wrap">
-        <select class="hero-cta-btn primary hero-cta-dropdown" aria-label="Choose where to go" onchange="if (this.value) window.location.href = this.value;">
-          <option value="" selected disabled>Bookings &amp; Inquiries</option>
-          <option value="dark.html">Book Your Event</option>
-          <option value="dark2.html">Check Availability</option>
-        </select>
-      </div>
+<style>
+  /* ===== CSS ===== */
+.hero-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.dropdown-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* ---- Trigger Button ---- */
+.cta-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow:
+    0 4px 15px rgba(108, 92, 231, 0.35),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    background 0.3s ease;
+  outline: none;
+  user-select: none;
+}
+
+.cta-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 25px rgba(108, 92, 231, 0.45),
+    0 2px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #5b4fd4, #8e83e8);
+}
+
+.cta-trigger:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow:
+    0 2px 8px rgba(108, 92, 231, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-trigger:focus-visible {
+  outline: 3px solid rgba(108, 92, 231, 0.5);
+  outline-offset: 3px;
+}
+
+.cta-label {
+  letter-spacing: 0.01em;
+}
+
+/* ---- Arrow Icon ---- */
+.cta-arrow {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  flex-shrink: 0;
+}
+
+.dropdown-wrap.open .cta-arrow {
+  transform: rotate(180deg);
+}
+
+/* ---- Dropdown Menu ---- */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  min-width: 260px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.12),
+    0 4px 16px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    visibility 0.3s ease;
+  z-index: 100;
+}
+
+/* Open state */
+.dropdown-wrap.open .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ---- Dropdown Items ---- */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.25rem;
+  text-decoration: none;
+  color: #2d3436;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition:
+    background 0.25s ease,
+    padding-left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-item:first-child {
+  border-radius: 16px 16px 0 0;
+}
+
+.dropdown-item:last-child {
+  border-radius: 0 0 16px 16px;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.06), rgba(162, 155, 254, 0.08));
+  padding-left: 1.5rem;
+  border-left-color: #6c5ce7;
+  color: #6c5ce7;
+}
+
+.dropdown-item:active {
+  background: rgba(108, 92, 231, 0.12);
+}
+
+/* ---- Item Icons ---- */
+.item-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-item:hover .item-icon {
+  transform: scale(1.15);
+}
+
+/* ---- Item Arrow (right side) ---- */
+.item-arrow {
+  margin-left: auto;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  color: #6c5ce7;
+  flex-shrink: 0;
+}
+
+.dropdown-item:hover .item-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---- Divider between items ---- */
+.dropdown-item + .dropdown-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .dropdown-menu {
+    min-width: 220px;
+    left: 0;
+    transform: translateX(0) translateY(-8px);
+  }
+
+  .dropdown-wrap.open .dropdown-menu {
+    transform: translateX(0) translateY(0);
+  }
+
+  .cta-trigger {
+    width: 100%;
+    justify-content: center;
+  }
+}
+</style>
+<div class="hero-cta">
+  <div class="dropdown-wrap">
+    <button class="cta-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Choose where to go">
+      <span class="cta-label">Bookings &amp; Inquiries</span>
+      <svg class="cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="dropdown-menu" role="menu" aria-label="Navigation options">
+      <a href="dark.html" role="menuitem" class="dropdown-item">
+        <span class="item-icon">📅</span>
+        <span>Book Your Event</span>
+        <svg class="item-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M5 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="dark2.html" role="menuitem" class="dropdown-item">
+        <span class="item-icon">🔍</span>
+        <span>Check Availability</span>
+        <svg class="item-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M5 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
     </div>
+  </div>
+</div>
+    <script>
+      // ===== Minimal JS =====
+const trigger = document.querySelector('.cta-trigger');
+const wrap = document.querySelector('.dropdown-wrap');
+
+trigger.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const isOpen = wrap.classList.toggle('open');
+  trigger.setAttribute('aria-expanded', isOpen);
+});
+
+// Close on outside click
+document.addEventListener('click', () => {
+  wrap.classList.remove('open');
+  trigger.setAttribute('aria-expanded', 'false');
+});
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    wrap.classList.remove('open');
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.focus();
+  }
+});
+    </script>
   </section>
 
   <!-- About Us Section -->
