@@ -76,10 +76,17 @@
       </div>
     </div>
 
-    <!-- Hero CTA Buttons -->
+    <!-- Hero CTA Dropdown -->
     <div class="hero-cta">
-      <a href="#book" class="hero-cta-btn primary">Book Your Event</a>
-      <a href="dark2.html" class="hero-cta-btn secondary">Check Availability</a>
+      <div class="hero-dropdown">
+        <button type="button" class="hero-cta-btn primary hero-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+          Get Started <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <ul class="hero-dropdown-menu" role="menu" aria-label="Quick links">
+          <li role="none"><a role="menuitem" href="#book" data-scroll>Book Your Event</a></li>
+          <li role="none"><a role="menuitem" href="dark2.html">Check Availability</a></li>
+        </ul>
+      </div>
     </div>
   </section>
 

@@ -762,6 +762,84 @@ span.lph-overlay {
     box-shadow: 0 12px 40px rgba(25,27,29,0.4);
 }
 
+/* ===== Hero CTA Dropdown ===== */
+.hero-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-dropdown-toggle {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-dropdown-toggle .fa-chevron-down {
+    font-size: 0.65em;
+    transition: transform 0.3s ease;
+}
+
+.hero-dropdown.open .hero-dropdown-toggle .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.hero-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    min-width: 280px;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.75);
+    -webkit-backdrop-filter: blur(18px) saturate(1.5);
+    backdrop-filter: blur(18px) saturate(1.5);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 16px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s;
+    z-index: 40;
+    text-align: center;
+}
+
+.hero-dropdown.open .hero-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.hero-dropdown-menu li + li {
+    margin-top: 4px;
+}
+
+.hero-dropdown-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #191b1d;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.hero-dropdown-menu a:hover {
+    background: #191b1d;
+    color: #fff;
+    transform: translateX(4px);
+}
+
 /* ===== Gallery ===== */
 .gallery-grid {
     display: grid;

@@ -383,6 +383,30 @@ barba.init({debug:true,transitions:[
 barba.hooks.after((data)=>{aliothScrollAnimations();ScrollTrigger.refresh();ScrollTrigger.update();initLocomotiveScroll();initForms();scrollToHash();cursorHovers();});
 
 
+/* ===== Hero CTA Dropdown ===== */
+$(document).on('click','.hero-dropdown-toggle',function(e){
+  e.preventDefault();
+  e.stopPropagation();
+  var $dd=$(this).closest('.hero-dropdown');
+  $dd.toggleClass('open');
+  $(this).attr('aria-expanded',$dd.hasClass('open')?'true':'false');
+});
+$(document).on('click','.hero-dropdown-menu a',function(){
+  var $dd=$(this).closest('.hero-dropdown');
+  $dd.removeClass('open');
+  $dd.find('.hero-dropdown-toggle').attr('aria-expanded','false');
+});
+$(document).on('click',function(e){
+  if(!$(e.target).closest('.hero-dropdown').length){
+    $('.hero-dropdown.open').removeClass('open').find('.hero-dropdown-toggle').attr('aria-expanded','false');
+  }
+});
+$(document).on('keydown',function(e){
+  if(e.key==='Escape'){
+    $('.hero-dropdown.open').removeClass('open').find('.hero-dropdown-toggle').attr('aria-expanded','false');
+  }
+});
+
 /* ===== Smooth in-page anchor scrolling (locomotive) ===== */
 $(document).on('click','a[href^="#"]',function(e){
   var hash=this.hash;
