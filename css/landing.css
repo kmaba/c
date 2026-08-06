@@ -718,6 +718,10 @@ span.lph-overlay {
     pointer-events: auto;
 }
 
+.landing-main .hero-cta {
+    bottom: 20%;
+}
+
 .hero-cta-btn {
     display: inline-block;
     padding: 24px 60px;
@@ -1128,6 +1132,9 @@ html[data-scroll-container] {
         gap: 16px;
         bottom: 8%;
     }
+    .landing-main .hero-cta {
+        bottom: 14%;
+    }
     .hero-cta-btn {
         padding: 14px 32px;
         font-size: 15px;
@@ -1146,6 +1153,17 @@ html[data-scroll-container] {
         align-items: center;
         gap: 12px;
         bottom: 5%;
+    }
+    .landing-main .hero-cta {
+        bottom: 10%;
+    }
+    .landing-main .hero-dropdown-menu {
+        top: auto;
+        bottom: calc(100% + 16px);
+        transform: translateX(-50%) translateY(10px);
+    }
+    .landing-main .hero-dropdown.open .hero-dropdown-menu {
+        transform: translateX(-50%) translateY(0);
     }
     .hero-cta-btn {
         padding: 12px 28px;
