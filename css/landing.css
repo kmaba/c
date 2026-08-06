@@ -824,6 +824,11 @@ span.lph-overlay {
     margin-top: 4px;
 }
 
+.hero-dropdown-menu li {
+    padding: 0;
+    line-height: normal;
+}
+
 .hero-dropdown-menu a {
     display: flex;
     align-items: center;
@@ -1227,7 +1232,7 @@ html[data-scroll-container] {
 .landing-main .lph-headline h1.big-title {
     font-size: 120px;
     line-height: 135px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.035em;
 }
 
 .landing-main .ls-text {
